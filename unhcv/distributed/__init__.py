@@ -1,0 +1,1 @@
+from .distributed_inform import get_global_rank, get_global_size

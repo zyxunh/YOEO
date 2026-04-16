@@ -1,0 +1,17 @@
+erasure_model_config:
+  denoise_pretrained_model: teacher checkpoint of yoeo1 stage
+flash_distill_config:
+  K:
+  - 20
+  - 20
+  - 20
+  - 20
+  num_iterations_per_K:
+  - 3000
+  - 3000
+  - 3000
+  - 3000
+rlhf_config:
+  c2p_on: false
+  distill_on: true
+  remove_loss_on: false

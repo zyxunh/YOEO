@@ -1,0 +1,45 @@
+erasure_model_config:
+  denoise_pretrained_model: teacher checkpoint of yoeo1 stage
+flash_distill_config:
+  K:
+  - 20
+  - 20
+  - 20
+  - 20
+  discriminator_pretrained_model: student discriminator checkpoint of yoeo2 stage (model_1.bin)
+  num_iterations_per_K:
+  - 0
+  - 0
+  - 0
+  - 3000
+  train_D_on_non_pair_label: false
+  use_mars: true
+mars_loss_config:
+  loss_scale: 0.5
+  use_entity_remove: true
+  use_mars_prob_loss: true
+remove_loss_config:
+  backward_respectively: true
+  entity_del_sundries: true
+  image_encoder_name: mars
+  image_size: 1024
+  use_crop: false
+  use_entity_similar: true
+  use_global_similar: false
+  use_mean_loss: false
+  use_predict_entity: true
+  use_teacher_entity_on_pair_data: true
+rlhf_config:
+  c2p_on: false
+  distill_on: true
+  grad_in_mask: true
+  grad_rescale_value: 2
+  grad_rescale_value_for_mars_prob: 2.0
+  mars_loss_on: true
+  mars_loss_scale_on_pair: 0
+  remove_loss_on: true
+  remove_loss_rescale_on: true
+  student_pretrained_model: student denoiser checkpoint of yoeo2 stage (model_0.bin)
+  use_distill_on_non_pair: true
+  use_mars_loss_on_distill: true
+  use_remove_loss_on_distill: true

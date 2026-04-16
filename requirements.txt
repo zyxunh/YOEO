@@ -1,0 +1,26 @@
+# numpy>=1.26.3,<2
+# opencv-python
+# transformers
+scipy
+# timm==1.0.9
+shapely
+kornia
+lmdb
+line_profiler
+imagesize
+bson
+gradio
+shapely
+lmdb
+accelerate
+# deepspeed
+wandb
+addict
+yapf
+torchmetrics
+# mmcv==1.6.2
+# diffusers==0.32.0
+# transformers==4.40.0
+
+# --index-url https://download.pytorch.org/whl/cu124
+# xformers #
